@@ -17,8 +17,8 @@ A File inviato da Riccardo
 \usepackage[all]{nowidow}
 \usepackage[inline]{enumitem}
 \usepackage[scaled]{beramono}
-%\usepackage{tcolorbox}
-\usepackage{multirow}
+%\usepackage{tcolorbox} include stdio.h
+\usepackage{multirow} %%%%% ciao %%%%%
 \usepackage{tikz,pifont}
 \usepackage{graphicx} 
 \usepackage{grffile}
