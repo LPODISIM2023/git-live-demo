@@ -1,1 +1,309 @@
-A File inviato da Riccardox
+A File inviato da Riccardo
+
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{xspace}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc} 
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{xcolor, soul}
+\usepackage[all]{nowidow}
+\usepackage[inline]{enumitem}
+\usepackage[scaled]{beramono}
+%\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{tikz,pifont}
+\usepackage{graphicx} 
+\usepackage{grffile}
+\usepackage{pgfplots}
+\usepackage{cleveref}
+\usepackage{color, colortbl}
+\usepackage[many]{tcolorbox}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{pbox}
+\usetikzlibrary{shadows}
+\usepackage{balance}
+\usepackage{ragged2e}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+
+%\usepackage{slashbox}
+
+\pgfplotsset{compat=1.8}
+\usepgfplotslibrary{statistics}
+
+
+\colorlet{lightgray}{gray!30}
+
+\sethlcolor{lightgray}
+
+%\DeclareUnicodeCharacter{00A0}{~}
+%\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.95,0.95,0.95}
+\definecolor{myred}{rgb}{0.5,0,0}
+
+
+%\lstdefinestyle{JavaStyle} {
+%	backgroundcolor=\color{white},   
+%	commentstyle=\color{mygreen}, 
+%	breakatwhitespace=false,
+%	keywordstyle=\color{violet},
+%	language=Java,
+%	stringstyle=\color{blue},
+%	basicstyle=\tiny\ttfamily,
+%	%  frame=single,
+%	showstringspaces=false }
+
+
+
+%\input{commands}
+\definecolor{Gray}{gray}{0.9}
+
+%\newcommand\untick{\ding{55}}
+\newcommand\untick{\ding{54}}
+\newcommand\tick{\ding{52}}
+
+\newcommand\edited{\ding{45}}
+
+%\newcommand\tickB{\color{black}\ding{52}\color{black}}
+
+
+
+
+
+\input{commands}
+
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+
+
+\begin{document}
+	
+%\title{Popularity Bias in Third-party Library Recommender Systems: An Empirical Study}
+
+%\title{Adversarial Attacks to API Recommender Systems: Time to Wake Up and Smell the Coffee?}
+
+\title{Telling apart code written by humans and machines: A case study with \CG}
+
+\title{Is this code written by \CG?\\ A source code detector using \CB}
+
+\title{Is this snippet written by \CG?\\ A \CB-based source code detector}
+
+\title{Is this piece of code written by \CG?\\ A source code detector using \CB}
+
+\title{Is this piece of source code written by \CG?}
+
+\title{Tell me if this piece of code is written by \CG}
+
+\title{Tell me if this piece of code was written by \CG}
+
+\title{Tell me \GS: Is this piece of code written by \CG?}
+
+\title{\GS, is this piece of code written by \CG?}
+
+\title{Tell me \GS, is this piece of code \\ written by AI?}
+
+\title{Is this piece of code written by \CG?}
+
+
+
+%\vspace{-1.6cm}
+
+%Claudio Di Sipio, Riccardo Rubei, Phuong Nguyen, Juri Di Rocco and Davide Di Ruscio
+
+%\author{\IEEEauthorblockN{Phuong T. Nguyen, Riccardo Rubei, Juri Di Rocco, Claudio Di Sipio, Davide Di Ruscio}%Phuong T. Nguyen, Davide Di Ruscio, Juri Di Rocco, Claudio Di Sipio
+%	\IEEEauthorblockA{\textit{University of L'Aquila, Italy} \\
+%		%\textit{name of organization (of Aff.)}\\
+%		%City, Country \\
+%		\{phuong.nguyen, riccardo.rubei, juri.dirocco, claudio.disipio, davide.diruscio\}@univaq.it}  %\{claudio.disipio, riccardo.rubei\}@graduate.univaq.it
+%	%%, 
+%%	\and
+%	\IEEEauthorblockN{Massimiliano Di Penta} %Massimiliano Di Penta 
+%	%<dipenta@unisannio.it>
+%	\IEEEauthorblockA{\textit{University of Sannio, Italy} \\ %Universit\`a degli studi del
+%	%\textit{name of organization (of Aff.)}\\
+%	%City, Country \\
+%	dipenta@unisannio.it}
+%%	\and
+%%	\IEEEauthorblockN{Davide Di Ruscio} 	
+%%	\IEEEauthorblockA{\textit{University of L'Aquila, Italy} \\	
+%%	davide.diruscio@univaq.it}
+%}
+
+%Universit\`a degli studi dell'Aquila
+
+%==================================
+\author{\IEEEauthorblockN{Phuong T. Nguyen}%Phuong T. Nguyen, Davide Di Ruscio, Juri Di Rocco, Claudio Di Sipio
+\IEEEauthorblockA{\textit{Universit\`a degli studi dell'Aquila, Italy} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+phuong.nguyen@univaq.it} 
+\and
+\IEEEauthorblockN{Juri Di Rocco}
+\IEEEauthorblockA{\textit{Universit\`a degli studi dell'Aquila, Italy} \\
+	juri.dirocco@univaq.it}
+\and
+\IEEEauthorblockN{Claudio Di Sipio}
+\IEEEauthorblockA{\textit{Universit\`a degli studi dell'Aquila, Italy} \\
+	claudio.disipio@graduate.univaq.it}
+\and
+\IEEEauthorblockN{Riccardo Rubei}
+\IEEEauthorblockA{\textit{Universit\`a degli studi dell'Aquila, Italy} \\
+	riccardo.rubei@graduate.univaq.it}
+\and
+\IEEEauthorblockN{Davide Di Ruscio}
+\IEEEauthorblockA{\textit{Universit\`a degli studi dell'Aquila, Italy} \\
+	davide.diruscio@univaq.it}
+\and
+\IEEEauthorblockN{Massimiliano Di Penta} %Massimiliano Di Penta 
+%<dipenta@unisannio.it>
+\IEEEauthorblockA{\textit{Universit\`a degli studi del Sannio, Italy} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+dipenta@unisannio.it}
+}
+%==================================
+%\author{}
+
+
+%\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+%email address or ORCID}
+%\and
+%\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+%email address or ORCID}
+%\and
+%\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+%email address or ORCID}
+%\and
+%\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+%email address or ORCID}
+%\and
+%\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\
+%City, Country \\
+%email address or ORCID}
+%\and
+%\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%\textit{name of organization (of Aff.)}\\elfe
+%City, Country \\
+%email address or ORCID}
+%}
+%\author{}
+
+\maketitle
+
+
+
+
+\begin{abstract}
+	
+%The abstract goes here.
+
+
+Since its launch in November 2022, \CG has amassed attention from both expert- and non expert users around the globe. %The increasing use of \CG in recent months has shown the ...  
+People interact with the platform to ask questions related to different domains of knowledge, and among others, query to get source code written in various programming languages. Essentially, \CG can provide users with code snippets to perform a specific task. However, while offering a practical solution to programming exercises, it should be used only as a supporting tool, and students are not expected to be completely reliant on the system to get their assignment done. Recently, various universities have expressed concerns over the abuse of the platform, citing that having code completely created by Artificial Intelligence (AI) %artificially created code %complete code ready 
+does not help students promote their programming skill, which can be obtained only through learning-by-doing. % to have their work done. 
+In this respect, we see the need to automatic detection of source code written by \CG.
+
+% including Java.
+%it may deteriorate their critical thinking ability. 
+
+In this work, we conceptualize \GS as a novel approach to the detection of source code written by \CG. \GS is built on top of \CB, a model pre-trained with large corpora of source code. %We build a classifier using \CB~-- a pre-trained model for source code and natural language. 
+We collected a dataset consisting of code written by humans, and then queried \CG to get snippets generated by the platform. We present an empirical evaluation on the collected datasets, and compare \GS with two existing baselines. %dataset consisting of source code generated by \CG as well as written by humans. 
+The experimental results show that \GS can give precise classification for several testing instances. More importantly, it outperforms both baselines with respect to the prediction accuracy.
+
+
+
+
+
+%Recommender systems for software engineering (RSSEs) assist software engineers in dealing with a growing information overload when discerning alternative development solutions. 
+%%Such systems can provide a wide range of items, including third-party libraries (TPLs), API function calls, code snippets, or relevant Stack Overflow posts. 
+%While RSSEs are becoming more and more effective in suggesting handy recommendations, they tend to suffer from popularity bias, \ie they favor items that are relevant mainly because several developers are using them. While this rewards artifacts that  are likely more reliable and well-documented, it would also mean missing artifacts rarely used because they are very specific or more recent. 
+%%Recommending artifacts in the long tail has been deemed a desired feature of any recommender system.
+%This paper studies popularity bias in Third-Party Library (TPL) RSSEs. First, we investigate whether state-of-the-art research in RSSEs has already tackled the issue of popularity bias. Then, we quantitatively assess \numSys existing TPL RSSEs, exploring their capability to deal with the recommendation of popular items. Finally, we propose a mechanism to defuse popularity bias in the recommendation list. The empirical study reveals that the issue of dealing with popularity in TPL RSSEs has not received adequate attention from the software engineering community. Among the surveyed work, only one starts investigating the issue, albeit getting a low prediction performance.
+%%% This is a repetition, in my opinion
+%; and \emph{(ii)} Various TPL recommender systems suffer from popularity bias, presenting only widely seen artifacts to developers. 
+	
+		
+%Recommender systems in software engineering provide developers with a wide range of valuable items to help them complete their tasks. Among others, API recommender systems have gained momentum in recent years as they became more successful at suggesting API calls or code snippets. While these systems have proven to be effective in terms of prediction accuracy, there has been less attention for what concerns such recommenders' resilience against adversarial attempts.
+%In fact, by crafting the recommenders' learning material, e.g., data from large open-source software (OSS) repositories, hostile users may succeed in injecting malicious data, putting at risk the software clients adopting API recommender systems.
+%In this paper, we present an empirical investigation of adversarial machine learning techniques and their possible influence on recommender systems.
+%The evaluation performed on three state-of-the-art API recommender systems reveals a worrying outcome: all of them are not immune to malicious data. The obtained result triggers the need for effective countermeasures to protect recommender systems against hostile attacks disguised in training data.
+\end{abstract}
+
+\begin{IEEEkeywords}
+\CG; \CB; Deep Learning; Source code classification; %Fairness %; Adversarial Attacks %keywords here
+\end{IEEEkeywords}
+
+
+\thispagestyle{plain}
+
+\section{Introduction}
+\label{sec:Introduction}
+\input{src/Introduction}
+
+\section{Background and motivations} %Motivations and background
+\label{sec:Background}
+\input{src/Background}
+
+
+
+\section{Proposed Approach}
+\label{sec:Approach}
+\input{src/Approach}
+
+
+\section{Evaluation materials and methods}
+\label{sec:Evaluation}
+\input{src/Evaluation}
+
+\section{Results}
+\label{sec:Results}
+\input{src/Results}
+
+\section{Discussion}
+\label{sec:Discussion}
+\input{src/Discussion}
+
+\section{Related work}
+\label{sec:RelatedWork}
+\input{src/RelatedWork}
+
+\section{Conclusion and future work}
+\label{sec:Conclusion}
+\input{src/Conclusion}
+
+
+\balance
+\bibliographystyle{IEEEtranS}
+\bibliography{IEEEabrv,main}
+
+\end{document}
+x
